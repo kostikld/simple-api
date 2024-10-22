@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: simple_api
+  datasource:
+    url: jdbc:h2:mem:simple_db
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+  h2:
+    console.enabled: true
+  sql:
+    init:
+      data-locations:
+        - classpath:initdb/customers.sql
+      mode: always
