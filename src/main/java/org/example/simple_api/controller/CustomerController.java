@@ -13,6 +13,7 @@ import java.util.UUID;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value = "api/v1/customer", produces = MediaType.APPLICATION_JSON_VALUE)
+@CrossOrigin(origins = "http://localhost:3000")
 public class CustomerController {
 
     private final CustomerRepository customerRepository;
